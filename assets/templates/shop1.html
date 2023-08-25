@@ -1,0 +1,26 @@
+<!-- order.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ... (Các thẻ meta, CSS và JavaScript khác) ... -->
+</head>
+<body>
+    <h2>Order Now</h2>
+
+    {% if product %}
+    <div class="product-details">
+        <h3>{{ product.name }}</h3>
+        <p>Description: {{ product.description }}</p>
+        <p>Price: {{ product.price }}</p>
+        <!-- ... (Các thông tin khác về sản phẩm) ... -->
+    </div>
+
+    <a href="/ordernow?productid={{ product.product_id }}" class="btn btn-primary btn-sm">Buy</a>
+    {% else %}
+    <p>Product not found.</p>
+    {% endif %}
+    
+    <!-- Các phần HTML khác -->
+
+</body>
+</html>
